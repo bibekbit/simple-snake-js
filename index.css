@@ -1,0 +1,146 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: arial;
+}
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: linear-gradient(45deg, #3778e9, #989393);
+}
+.container{
+    height: 75vmin;;
+    width: 69vmin;
+    background: #14213d;
+    display: flex;
+    flex-direction: column;
+    border-radius: 0.4rem;
+}
+.display{
+    color: #b6b5b5;
+    font-size: 1.3rem;
+    display: flex;
+    /* justify-content: space-between; <remove this comment when you add high score>*/
+    justify-content: center;
+    padding: 1rem 1.2rem;
+    font-weight: 500;
+}
+.ground{
+    height: 100%;
+    width: 100%;
+    background: #000000;
+    display: grid;
+    grid-template: repeat(30, 1fr) /  repeat(30, 1fr);
+}
+.ground .food{
+    background: #ef233c;
+    border-radius: 50%;
+}
+.ground .snake-head{
+    /* background: #60cbff; */
+    background: #00a6fb;
+    border-radius: 50%;
+}
+.controlArrow{
+    height: 25vmin;;
+    width: 25vmin;
+    background: #0a1128;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    position: relative;
+    margin-left: 3rem;
+    /* border-top: 4rem solid #fff;
+    border-left: 4rem solid #eb0a0a;
+    border-right: 4rem solid #1864d6;
+    border-bottom: 4rem solid #92db0d; */
+}
+.fa-solid{
+    background: transparent;
+    font-size: 2.5rem;
+    position: absolute;
+    
+    list-style: none;
+    transform-origin: 12.5vmin;
+    transform: rotate(calc(360deg / 4 * var(--i)));
+}
+.fa-arrow-up-long{
+    position: absolute;
+    top: 0.7rem;
+    color: aliceblue;
+}
+.fa-arrow-down-long{
+    position: absolute;
+    bottom: 0.7rem;
+    color: aliceblue;
+}
+.fa-arrow-right-long{
+    position: absolute;
+    right: 0.7rem;
+    color: aliceblue;
+}
+.fa-arrow-left-long{
+    position: absolute;
+    left: 0.7rem;
+    color: aliceblue;
+}
+.fa-solid:active{
+    color: lightcoral;
+    font-size: 2rem;
+}
+@media (max-width: 500px) {
+    body{
+        /* display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column; */
+        display: grid;
+        place-items: center;
+    }
+    .container{
+        height: 98vmin;;
+        width: 88vmin;
+       
+    }
+    .controlArrow{
+        height: 45vmin;;
+        width: 45vmin;
+        background: #0a1129;
+        border-radius: 50%;
+        display: grid;
+        place-items: center;
+        position: relative;
+        margin-left: 0;
+    }
+    .fa-arrow-up-long{
+        position: absolute;
+        top: 0.7rem;
+        color: aliceblue;
+        font-size: 2rem;
+    }
+    .fa-arrow-down-long{
+        position: absolute;
+        bottom: 0.7rem;
+        color: aliceblue;
+        font-size: 2rem;
+    }
+    .fa-arrow-right-long{
+        position: absolute;
+        right: 0.7rem;
+        color: aliceblue;
+        font-size: 2rem;
+    }
+    .fa-arrow-left-long{
+        position: absolute;
+        left: 0.7rem;
+        color: aliceblue;
+        font-size: 2rem;
+    }
+    .fa-solid:active{
+        color: rgb(240, 130, 128);
+        font-size: 1.5rem;
+    }
+  }
